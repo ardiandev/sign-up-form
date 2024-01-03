@@ -2,6 +2,10 @@
 
 Welcome to the Sign Up form! This simple HTML form allows users to sign up for a service. Below is an overview of the project structure and usage. This is one of the Odin Project.
 
+## Demo
+
+Check out the live [demo](https://ardiandev.github.io/sign-up-form/) to see the form in action.
+
 ## Table of Contents
 
 - [Introduction](#introduction)
