@@ -26,6 +26,11 @@ body {
 a {
   color: var(--fc-4);
   font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Utility class  */
