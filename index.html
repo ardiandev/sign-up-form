@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./form.css" />
+    <link rel="icon" href="./assets/icons/add-friend.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="side-image">
+        <img src="./assets/images/hero.jpg" alt="student" />
+        <div class="logo">
+          <img src="./assets/images/graduation-hat.png" alt="logo" />
+        </div>
+        <p class="img-copyright">
+          Photo by
+          <a href="https://pixabay.com/photos/child-boy-cute-kid-young-2835430/"
+            >Mihail Fotodeti</a
+          >
+        </p>
+      </section>
+
+      <section class="form-section">
+        <div class="container  form-intro">
+          <h1>Sign up</h1>
+          <p>
+            This is not real online service! You know you need something like
+            this in your life to help you realize your deepest drems. Sign up
+            now to get started.
+          </p>
+          <p>You know you want to.</p>
+        </div>
+
+        <form action="/my-form" method="POST">
+          <div class="input-section">
+            <div class="container">
+              <fieldset class="user-info">
+                <div class="form-field">
+                  <label for="firstName">First Name</label>
+                  <input type="text" name="firstName" id="firstName" />
+                </div>
+                <div class="form-field">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" name="lastName" id="lastName" />
+                </div>
+              </fieldset>
+
+              <fieldset class="user-contact">
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div class="form-field">
+                  <label for="phone">Phone</label>
+                  <input type="tel" name="phone" id="phone" />
+                </div>
+              </fieldset>
+
+              <fieldset class="user-password">
+                <div class="form-field">
+                  <label for="userPassword">Your Password</label>
+                  <input
+                    type="password"
+                    name="userPassword"
+                    id="userPassword"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                  />
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="container btn-container">
+            <button class="submit-btn" type="submit">Create Account</button>
+            <p class="login-ask">
+              Already have an account? <a class="login-link" href="#">Log in</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

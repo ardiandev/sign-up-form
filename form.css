@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fc-1: rgb(45, 50, 80);
+  --fc-2: rgb(66, 71, 105);
+  --fc-3: #fff;
+  --fc-4: rgb(246, 177, 122);
+  --fc-5: rgb(112, 119, 161);
+
+  --ff-1: "Roboto Slab", serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--fc-1);
+  color: var(--fc-3);
+  font-size: 1rem;
+  font-family: var(--ff-1);
+  line-height: 1.8;
+}
+
+a {
+  color: var(--fc-4);
+  font-weight: 600;
+}
+
+/* Utility class  */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+}
+
+.side-image {
+  width: 450px;
+  position: relative;
+}
+
+.side-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.logo {
+  height: 90px;
+  width: 100%;
+  z-index: 2;
+  margin-top: 60px;
+  background-color: rgb(0, 0, 0, 0.3);
+  position: relative; /* Ensure position is set to relative for absolute positioning of child elements */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain; /* Maintain the aspect ratio while covering the container */
+}
+
+.img-copyright {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--fc-1);
+  width: 60%;
+  text-align: center;
+}
+
+.form-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-section {
+  width: 100%;
+  background-color: var(--fc-2);
+  padding: 20px 0;
+}
+
+.form-intro {
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.form-field {
+  width: 250px;
+}
+
+fieldset:not(fieldset:first-child) {
+  margin-top: 10px;
+}
+
+.submit-btn {
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  margin-top: 10px;
+  background-color: var(--fc-2);
+  border: 1px solid transparent;
+  color: var(--fc-3);
+  transition: 0.5s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--fc-5);
+  color: var(--fc-4);
+  transform: scale(0.9);
+}
+
+.login-ask {
+  margin-top: 10px;
+}
+
+label,
+input {
+  width: 100%;
+}
+
+form label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 3px;
+}
+
+form input {
+  border: 1px solid black;
+  outline: none;
+  font-size: 1.25rem;
+  padding-left: 5px;
+  height: 30px;
+}
+
+form input:focus {
+  border: 2px solid var(--fc-4);
+}
+
+form input.filled {
+  border: 2px solid var(--fc-2);
+}
+
+@media (max-width: 1040px) {
+  fieldset {
+    flex-direction: column;
+    /* border: 1px solid black; */
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .input-section {
+    /* margin: 20px 0; */
+    padding: 20px 0;
+  }
+
+  .side-image {
+    width: 400px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .side-image {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .form-intro {
+    margin-bottom: 20px;
+  }
+}
